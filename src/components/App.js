@@ -4,9 +4,7 @@ import CardCharacter from './CardCharacter';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleOnChange = this.handleOnChange.bind(this);
-
     this.state = {
       characters: [],
       showOnlySearch: false
@@ -34,7 +32,7 @@ class App extends React.Component {
     return (
       <ul className="card-listCharacter">
         { listCardCharacters.map (list =>
-            <li>
+            <li className="liCard">
               <CardCharacter
                 name = {list.name}
                 image = {list.image}
@@ -47,23 +45,19 @@ class App extends React.Component {
       </ul>);
     }
 
-
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">My Harry Potter Characters</h1>
         </header>
-        <main>
-          <input className="inputSearch" type="text" name="search" onChange={ this.handleOnChange }/>
+        <main className="wrapper">
+          <input className="inputSearch" type="text" name="search" onChange = { this.handleOnChange }/>
           { this.paintCharacters() }
         </main>
       </div>
     );
   }
-
-
 }
 
 export default App;

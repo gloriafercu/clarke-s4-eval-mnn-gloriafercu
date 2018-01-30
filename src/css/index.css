@@ -1,25 +1,102 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  font-size: 20px;
+  font-family: Arial;
+  font-size: 18px;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  background-color: blue;
+}
+
+.App-header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+}
+
 .App-title {
   text-align: center;
-  font-size: 30px;
+  margin: 0;
+  font-size: 32px;
+  color: white;
 }
-.card-listCharacter li {
-  text-align: center;
+.card-listCharacter {
   list-style-type: none;
-  margin: 20px;
+  padding: 0;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  max-width: 1140px;
+}
+.liCard {
+  background-color: #fff;
+  width: 270px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name{
+  text-align: center;
+  font-size: 22px;
+}
+.house,
+.alive {
+  margin: 10px;
+}
+
+.inputSearch {
+  height: 40px;
+  font-size: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin: 150px auto 30px;
+  max-width: 270px;
+  box-sizing: border-box;
 }
 .image {
-  width: 163px;
+  width: 240px;
+  height: 240px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-.inputSearch {
-  height: 25px;
-  width: 100%;
-  font-size: 15px;
-  padding: 5px;
-  border-radius: 5px;
+
+@media (min-width: 660px) and (max-width: 980px) {
+  .card-listCharacter {
+    grid-template-columns: repeat(2,270px);
+  }
+  .inputSearch {
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1220px) {
+  .card-listCharacter {
+    grid-template-columns: repeat(3,270px);
+  }
+  .inputSearch {
+    max-width: 870px;
+  }
+}
+@media all and (min-width: 1221px) {
+  .card-listCharacter {
+    grid-template-columns: repeat(4,270px);
+  }
+  .inputSearch {
+    max-width: 1140px;
+  }
 }

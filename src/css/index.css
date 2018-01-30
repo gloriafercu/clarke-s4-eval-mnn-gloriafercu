@@ -16,3 +16,10 @@ body {
 .image {
   width: 163px;
 }
+.inputSearch {
+  height: 25px;
+  width: 100%;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}

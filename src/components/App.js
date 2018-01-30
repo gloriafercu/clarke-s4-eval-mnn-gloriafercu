@@ -23,7 +23,7 @@ class App extends React.Component {
         // console.log(json)
       });
     }
-    
+
   handleOnChange() {
     this.setState({
       showOnlySearch: !this.state.showOnlySearch
@@ -56,7 +56,7 @@ class App extends React.Component {
           <h1 className="App-title">My Harry Potter Characters</h1>
         </header>
         <main>
-          <input type="text" name="search" onChange={ this.handleOnChange }/>
+          <input className="inputSearch" type="text" name="search" onChange={ this.handleOnChange }/>
           { this.paintCharacters() }
         </main>
       </div>

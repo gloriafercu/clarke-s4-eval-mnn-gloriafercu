@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
-  background-color: blue;
+  background-color: #E1EBD0;
 }
 
 .App-header {
@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 90px;
   background-color: #000;
 }
 
@@ -40,6 +40,8 @@ body {
 }
 .liCard {
   background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.25);
   width: 270px;
 }
 .card {
@@ -47,6 +49,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 .name{
   text-align: center;
@@ -68,11 +71,11 @@ body {
   box-sizing: border-box;
 }
 .image {
-  width: 240px;
-  height: 240px;
-  background-size: 100%;
+  width: 230px;
+  height: 230px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 0 0;
 }
 
 @media (min-width: 660px) and (max-width: 980px) {

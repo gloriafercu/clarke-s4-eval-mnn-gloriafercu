@@ -50,7 +50,7 @@ body {
 }
 .liCard {
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.25);
   width: 270px;
 }
@@ -72,8 +72,7 @@ body {
   width: 230px;
 }
 .house {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -95,8 +94,7 @@ body {
   background-image: url('../images/Slytherin.png');
 }
 .alive {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -106,10 +104,10 @@ body {
   overflow: hidden;
 }
 .alive--vivo {
-  background-image: url('https://cdn0.iconfinder.com/data/icons/medical-and-healthcare/32/heartbeat-512.png');
+  background-image: url('../images/pulse-line-red.svg');
 }
 .alive--muerto {
-  background-image: url('https://image.flaticon.com/icons/svg/12/12231.svg');
+  background-image: url('../images/death-skull-and-bones.svg');
 }
 
 .image {

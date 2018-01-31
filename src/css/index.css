@@ -36,7 +36,7 @@ body {
   border-radius: 5px;
   padding: 10px;
   width: 100%;
-  margin: 150px auto 30px;
+  margin: 140px auto 30px;
   max-width: 270px;
   box-sizing: border-box;
 }
@@ -65,10 +65,51 @@ body {
   text-align: center;
   font-size: 22px;
 }
-.house,
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 230px;
+}
+.house {
+  margin-top: 0;
+  margin-bottom: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 0;
+  width: 40px;
+  padding-top: 40px;
+  overflow: hidden;
+}
+.house--gryffindor {
+  background-image: url('../images/Gryffindor.png');
+}
+.house--hufflepuff {
+  background-image: url('../images/Hufflepuff.png');
+}
+.house--ravenclaw {
+  background-image: url('../images/Ravenclaw.png');
+}
+.house--slytherin {
+  background-image: url('../images/Slytherin.png');
+}
 .alive {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 0;
+  width: 40px;
+  padding-top: 40px;
+  overflow: hidden;
+}
+.alive--vivo {
+  background-image: url('https://cdn0.iconfinder.com/data/icons/medical-and-healthcare/32/heartbeat-512.png');
+}
+.alive--muerto {
+  background-image: url('https://image.flaticon.com/icons/svg/12/12231.svg');
 }
 
 .image {
@@ -77,7 +118,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 660px) and (max-width: 980px) {

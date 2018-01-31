@@ -7,7 +7,7 @@ class App extends React.Component {
     this.handleOnChange = this.handleOnChange.bind(this);
     this.state = {
       characters: [],
-      showOnlySearch: false
+      valueInput:''
     };
   }
 
@@ -23,19 +23,16 @@ class App extends React.Component {
     }
 
   handleOnChange(event) {
+    const valueToShow = event.target.value;
     this.setState({
-      showOnlySearch: !this.state.showOnlySearch
-  
-    });
-    console.log(event);
-  }
+      valueInput: valueToShow.toLowerCase()
+      })
+    }
 
   paintCharacters() {
-    let cardsToShow = this.state.characters;
-    if(this.state.showOnlySearch) {
-      cardsToShow =
-        this.state.characters.filter(list => list.name.toLowerCase().includes(this.state.showOnlySearch.toLowerCase()));
-    }
+    const cardsToShow = this.state.characters.filter(item =>
+      item.name.toLowerCase().includes(this.state.valueInput)
+    );
 
     return (
       <ul className="card-listCharacter">
@@ -44,7 +41,7 @@ class App extends React.Component {
               <CardCharacter
                 name = {list.name}
                 image = {list.image}
-                house = {list.house}
+                house = {list.house.toLowerCase()}
                 alive = {list.alive}
               />
             </li>
@@ -54,13 +51,14 @@ class App extends React.Component {
     }
 
   render() {
+    console.log(this.state.valueInput);
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">My Harry Potter Characters</h1>
         </header>
         <main className="wrapper">
-          <input className="inputSearch" type="text" name="search" onChange = { this.handleOnChange }/>
+          <input className="inputSearch" type="text" name="search" placeholder="Search characters" onChange = { this.handleOnChange }/>
           { this.paintCharacters() }
         </main>
       </div>

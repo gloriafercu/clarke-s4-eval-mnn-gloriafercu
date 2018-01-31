@@ -22,16 +22,24 @@ class App extends React.Component {
       });
     }
 
-  handleOnChange() {
+  handleOnChange(event) {
     this.setState({
       showOnlySearch: !this.state.showOnlySearch
+  
     });
+    console.log(event);
   }
+
   paintCharacters() {
-    const listCardCharacters = this.state.characters;
+    let cardsToShow = this.state.characters;
+    if(this.state.showOnlySearch) {
+      cardsToShow =
+        this.state.characters.filter(list => list.name.toLowerCase().includes(this.state.showOnlySearch.toLowerCase()));
+    }
+
     return (
       <ul className="card-listCharacter">
-        { listCardCharacters.map (list =>
+        { cardsToShow.map (list =>
             <li className="liCard">
               <CardCharacter
                 name = {list.name}
